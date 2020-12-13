@@ -6,43 +6,75 @@
   <!-- <script type="text/javascript" src="script.js"></script> -->
   <title>Subject Hub</title>
   <style>
-    h1{
+    h1 {
       color: navy;
       text-align: center;
     }
-    section.create{
-     width: 25%;
-     text-align: center;
-    }
-    button{
-      background-color:navy;
+    button {
+      height: 25px;
+      width: 100px;
+      background-color: navy;
       color: white;
+      margin: 20px;
+    }
+
+    #main-form {
+      display: none;
+      width: auto;
+      text-align: center;
+    }
+
+    .nav {
+      text-align: center;
+    }
+
+    .header {
+      margin: 5px 0px 0px 5px;
+      text-align: right;
     }
   </style>
 </head>
 
 <body>
+  <section class="header">
+    <button type="button">Login</button>
+  </section>
   <h1> Subject Hub </h1>
+  <section class="nav">
+    <input type="text" size="50" placeholder="Search articles..."><br>
+    <button type="button" onclick="">Search</button>
+    <button type="button" onclick="showForm()">Create Article</button>
+  </section>
+
   <section class="create">
-    <h2> Create Article</h2>
-      <form action="/subjects" method="POST" id="main-form">
-        <input type="text" placeholder="category" name="category"><br>
-        <input type="text" placeholder="type" name="type"><br>
-        <input type="text" placeholder="name" name="name"><br>
-        <input type="text" placeholder="born" name="born"><br>
-        <input type="text" placeholder="died" name="died"><br>
-        <input type="text" placeholder="nationality" name="nationality"><br>
-        <input type="text" placeholder="known for" name="known_for"><br>
-        <input type="text" placeholder="notable work" name="notable_work"><br>
-        <input type="text" placeholder="about" name="about"><br>
-        <input type="text" placeholder="year" name="year"><br>
-        <input type="text" placeholder="medium" name="medium"><br>
-        <input type="text" placeholder="dimensions" name="dimensions"><br>
-        <input type="text" placeholder="location" name="location"><br><br>
-        <button type="submit">Submit</button>
-      </form>
+    <form action="/subjects" method="POST" id="main-form">
+      <input type="text" placeholder="category" name="category"><br>
+      <input type="text" placeholder="type" name="type"><br>
+      <input type="text" placeholder="name" name="name"><br>
+      <input type="text" placeholder="born" name="born"><br>
+      <input type="text" placeholder="died" name="died"><br>
+      <input type="text" placeholder="nationality" name="nationality"><br>
+      <input type="text" placeholder="known for" name="known_for"><br>
+      <input type="text" placeholder="notable work" name="notable_work"><br>
+      <input type="text" placeholder="about" name="about"><br>
+      <input type="text" placeholder="year" name="year"><br>
+      <input type="text" placeholder="medium" name="medium"><br>
+      <input type="text" placeholder="dimensions" name="dimensions"><br>
+      <input type="text" placeholder="location" name="location"><br>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
 </body>
+<script>
+  function showForm() {
+    if (document.getElementById("main-form").style.display = "none"){
+        document.getElementById("main-form").style.display = "block";
+    }
+    else if (document.getElementById("main-form").style.display = "block"){
+          document.getElementById("main-form").style.display = "none";
+    }
+  }
+</script>
 
 </html>
