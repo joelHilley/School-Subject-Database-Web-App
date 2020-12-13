@@ -1,0 +1,7 @@
+Username - Password
+
+Admin - newpass
+
+tutor - tutorpassword
+
+student- studentpassword
